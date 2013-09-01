@@ -1,18 +1,18 @@
 Elgg Extended Tinymce plugin for Elgg 1.7
-Latest Version: 3.5.8
-Released: 2012-11-24
+Latest Version: 4.0.5 r22
+Released: 2013-08-27
 Contact: iionly@gmx.de
 License: GNU General Public License version 2
-Copyright: (c) iionly 2012, (C) Curverider 2008-2010
+Copyright: (c) iionly 2012-2013, (C) Curverider 2008-2013
 
 The TinyMCE editor is licensed under
 GNU Lesser General Public License version 2.1
-(c) 2003-2012 Moxiecode Systems AB.
+(c) 2003-2013 Moxiecode Systems AB.
 Website: http://www.tinymce.com/
 
 
 
-An extended tinymce plugin based on version 3.5.8 of the TinyMCE editor.
+An extended tinymce plugin based on version 4.0.5 of the TinyMCE editor.
 
 
 
@@ -26,4 +26,4 @@ Instructions:
 
 4. Enable the tinymce plugin again,
 
-5. Execute the upgrade.php script, i.e. call http://<yoursite.domain>/upgrade.php in your browser.
+5. Execute the upgrade.php script, i.e. call http://<yoursite.domain>/upgrade.php in your browser to flush the site cache.

@@ -1,4 +1,8 @@
+if (window.tinyMCE) {
+    var editor = window.tinyMCE.get(textAreaId);
 
-	if(window.tinyMCE)
-		window.tinyMCE.execCommand("mceInsertContent",true,content);
-	
+    if (editor) {
+
+        editor.execCommand("mceInsertContent", true, content);
+    }
+}
