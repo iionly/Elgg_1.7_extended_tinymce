@@ -31,7 +31,7 @@ if (!$tinymce_js_loaded) {
         relative_urls : false,
         remove_script_host : false,
         document_base_url : "<?php echo $CONFIG->wwwroot; ?>",
-        plugins: "advlist autolink autosave charmap code emoticons fullscreen hr image insertdatetime link lists paste preview print table textcolor wordcount",
+        plugins: "advlist autolink charmap code emoticons fullscreen hr image insertdatetime link lists paste preview print table textcolor wordcount",
         menubar: false,
         toolbar_items_size: "small",
         toolbar1: "newdocument preview fullscreen print | styleselect | fontselect | fontsizeselect",
