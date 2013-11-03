@@ -1,6 +1,6 @@
 Elgg Extended Tinymce plugin for Elgg 1.7
-Latest Version: 4.0.8 r25
-Released: 2013-10-10
+Latest Version: 4.0.10 r26
+Released: 2013-11-03
 Contact: iionly@gmx.de
 License: GNU General Public License version 2
 Copyright: (c) iionly 2012-2013, (C) Curverider 2008-2013
@@ -12,7 +12,7 @@ Website: http://www.tinymce.com/
 
 
 
-An extended tinymce plugin based on version 4.0.8 of the TinyMCE editor.
+An extended tinymce plugin based on version 4.0.10 of the TinyMCE editor.
 
 
 
@@ -27,3 +27,13 @@ Instructions:
 4. Enable the tinymce plugin again,
 
 5. Execute the upgrade.php script, i.e. call http://<yoursite.domain>/upgrade.php in your browser to flush the site cache.
+
+
+
+Creating your own custom skin:
+
+1. Configure your custom skin at http://skin.tinymce.com/ and download it,
+
+2. Copy your skin folder into the tinymce/tinymce/js/tinymce/skins directory,
+
+3. Change the skin name of the skin option in tinymce/views/default/input/longtext.php to the name of your skin.
