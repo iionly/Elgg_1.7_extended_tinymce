@@ -35,7 +35,7 @@ if (!$tinymce_js_loaded) {
         menubar: false,
         toolbar_items_size: "small",
         toolbar1: "newdocument preview fullscreen print | styleselect | fontselect | fontsizeselect",
-        toolbar2: "undo redo | bullist numlist | outdent indent | bold italic underline | alignleft aligncenter alignright alignjustify",
+        toolbar2: "undo redo | bullist numlist | outdent indent | bold italic underline | alignleft aligncenter alignright alignjustify | removeformat",
         toolbar3: "pastetext | insertdatetime | charmap | hr | table | forecolor backcolor | link unlink | image | emoticons | blockquote<?php if (isadminloggedin()){?>,|,code<?php }?>",
         width : "99%",
         browser_spellcheck : true,
