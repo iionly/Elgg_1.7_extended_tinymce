@@ -15,7 +15,9 @@ global $tinymce_js_loaded, $CONFIG;;
 
 $input = rand(0,9999);
 
-if (!isset($tinymce_js_loaded)) $tinymce_js_loaded = false;
+if (!isset($tinymce_js_loaded)) {
+	$tinymce_js_loaded = false;
+}
 
 if (!$tinymce_js_loaded) {
 
@@ -24,29 +26,33 @@ if (!$tinymce_js_loaded) {
 <script language="javascript" type="text/javascript" src="<?php echo $vars['url']; ?>mod/tinymce/tinymce/js/tinymce/tinymce.min.js"></script>
 <!-- intialise tinymce, you can find other configurations here http://tinymce.moxiecode.com/tryit/full.php -->
 <script language="javascript" type="text/javascript">
-    tinyMCE.init({
-        selector: ".mceEditor",
-        theme: "modern",
-        skin : "lightgray",
-        relative_urls : false,
-        remove_script_host : false,
-        document_base_url : "<?php echo $CONFIG->wwwroot; ?>",
-        plugins: "advlist autolink charmap code colorpicker emoticons fullscreen hr image insertdatetime link lists paste preview print table textcolor textpattern wordcount",
-        menubar: false,
-        toolbar_items_size: "small",
-        toolbar1: "newdocument preview fullscreen print | styleselect | fontselect | fontsizeselect",
-        toolbar2: "undo redo | bullist numlist | outdent indent | bold italic underline | alignleft aligncenter alignright alignjustify | removeformat",
-        toolbar3: "pastetext | insertdatetime | charmap | hr | table | forecolor backcolor | link unlink | image | emoticons | blockquote<?php if (isadminloggedin()){?>,|,code<?php }?>",
-        width : "99%",
-        browser_spellcheck : true,
-        image_advtab: true,
-        paste_data_images: false,
-        insertdate_formats: ["%I:%M:%S %p", "%H:%M:%S", "%Y-%m-%d", "%d.%m.%Y"],
-        content_css: "<?php echo $vars['url']; ?>mod/tinymce/views/default/tinymce/custom_content.css"
-    });
+	tinyMCE.init({
+		selector: ".mceEditor",
+		theme: "modern",
+		skin : "lightgray",
+		relative_urls : false,
+		remove_script_host : false,
+		document_base_url : "<?php echo $CONFIG->wwwroot; ?>",
+		plugins: "advlist autolink autoresize charmap code colorpicker emoticons fullscreen hr image insertdatetime link lists paste preview print table textcolor textpattern wordcount",
+		menubar: false,
+		toolbar_items_size: "small",
+		toolbar: [
+			"newdocument preview fullscreen print | styleselect | fontselect | fontsizeselect",
+			"undo redo | bullist numlist | outdent indent | bold italic underline | alignleft aligncenter alignright alignjustify | removeformat",
+			"pastetext | insertdatetime | charmap | hr | table | forecolor backcolor | link unlink | image | emoticons | blockquote<?php if (isadminloggedin()){?>,|,code<?php }?>"
+		],
+		width : "99%",
+		browser_spellcheck : true,
+		image_advtab: true,
+		paste_data_images: false,
+		autoresize_min_height: 200,
+		autoresize_max_height: 450,
+		insertdate_formats: ["%I:%M:%S %p", "%H:%M:%S", "%Y-%m-%d", "%d.%m.%Y"],
+		content_css: "<?php echo $vars['url']; ?>mod/tinymce/views/default/tinymce/custom_content.css"
+	});
 </script>
 <?php
-    $tinymce_js_loaded = true;
+	$tinymce_js_loaded = true;
 }
 
 ?>
@@ -55,9 +61,9 @@ if (!$tinymce_js_loaded) {
 <textarea class="input-textarea mceEditor" name="<?php echo $vars['internalname']; ?>" <?php echo $vars['js']; ?>><?php echo htmlentities($vars['value'], null, 'UTF-8'); ?></textarea>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('textarea').parents('form').submit(function() {
-            tinyMCE.triggerSave();
-        });
-    });
+	$(document).ready(function() {
+		$('textarea').parents('form').submit(function() {
+			tinyMCE.triggerSave();
+		});
+	});
 </script>
