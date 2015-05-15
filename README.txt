@@ -1,6 +1,6 @@
 Elgg Extended Tinymce plugin for Elgg 1.7
-Latest Version: 4.1.8
-Released: 2015-03-07
+Latest Version: 4.1.10
+Released: 2015-05-15
 Contact: iionly@gmx.de
 License: GNU General Public License version 2
 Copyright: (c) iionly 2012-2015, (C) Curverider 2008-2015
@@ -12,7 +12,7 @@ Website: http://www.tinymce.com/
 
 
 
-An extended tinymce plugin based on version 4.1.8 of the TinyMCE editor for Elgg 1.7.
+An extended tinymce plugin based on version 4.1.10 of the TinyMCE editor for Elgg 1.7.
 
 
 
@@ -32,8 +32,10 @@ Instructions:
 
 Creating your own custom skin:
 
+IMPORTANT: Tinymce uses a z-index of 100 for its fullscreen mode. This conflicts with the z-index values used by Elgg (e.g. Topbar). To get it fully working you need to adjust the z-index of ".mce-fullscreen" to 9001 within the files skin.min.css and skin.ie7.min.css of your customized skin.
+
 1. Configure your custom skin at http://skin.tinymce.com/ and download it,
 
-2. Copy your skin folder into the tinymce/tinymce/js/tinymce/skins directory,
+2. Copy your skin folder into the mod/tinymce/tinymce/js/tinymce/skins/lightgray directory,
 
-3. Change the skin name of the skin option in tinymce/views/default/input/longtext.php to the name of your skin.
+3. Change the skin name of the skin option in mod/tinymce/views/default/input/longtext.php to the name of your customized skin.
